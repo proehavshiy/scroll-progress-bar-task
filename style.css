@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 2rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+#root {
+  margin: 3% auto;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.content span {
+  position: relative;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 50%;
+}
+
+.content:nth-of-type(even){
+  background-color: darksalmon;
+}
+
+.content:nth-of-type(odd) {
+  background-color: chocolate;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 1rem;
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background-color: deepskyblue;
+  border-radius: 10px;
+  transition: width .1s linear;
+}
+
+.scroll-top-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(58, 62, 70, .7);
+  border-radius: 4px;
+  background-color: deepskyblue;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  visibility: hidden;
+}
+
+.scroll-top-button path {
+  stroke: rgba(58, 62, 70, .7)
+}
+
+.scroll-top-button:hover {
+  border: 1px solid deepskyblue;
+}
